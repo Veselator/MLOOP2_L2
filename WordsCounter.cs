@@ -17,6 +17,8 @@ namespace MLOOP2_L2
                        .Select(word => word.Trim(punctuation))
                        .Where(word => !string.IsNullOrEmpty(word))
                        .GroupBy(word => word)
+                       .OrderBy(group => group.Count())
+                       .Reverse()
                        .ToDictionary(group => group.Key, group => group.Count());
         }
     }

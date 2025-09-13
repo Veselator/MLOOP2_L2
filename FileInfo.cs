@@ -48,12 +48,12 @@ namespace MLOOP2_L2
             sb.AppendLine($"\n Файл {Name}");
             sb.AppendLine($" Всього слів: {totalCountOfWords}\n");
 
-            sb.AppendLine(" Всього слів".PadRight(maxKeyLength) + "  Кількість");
-            sb.AppendLine(" " + new string('=', maxKeyLength + 10));
+            sb.AppendLine(" Слово".PadRight(maxKeyLength) + "     Кількість");
+            sb.AppendLine(" " + new string('=', maxKeyLength + 13));
 
             foreach (string key in wordsCount.Keys)
             {
-                sb.AppendLine($" {key.PadRight(maxKeyLength)}: {wordsCount[key]}");
+                sb.AppendLine($" {key.PadRight(maxKeyLength)}  : {wordsCount[key]}");
             }
             return sb.ToString();
         }
