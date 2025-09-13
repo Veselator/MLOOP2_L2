@@ -10,7 +10,7 @@ namespace MLOOP2_L2
     public class FileInfo
     {
         public string Name { get; private set; }
-        private Dictionary<string, int> wordsCount;
+        private Dictionary<string, int> wordsCount = new Dictionary<string, int>();
         private string content = string.Empty;
         private int totalCountOfWords;
 
@@ -41,6 +41,7 @@ namespace MLOOP2_L2
 
         public override string ToString()
         {
+            if (wordsCount.Count == 0) return " Вмісту немає!";
             StringBuilder sb = new StringBuilder();
             int maxKeyLength = wordsCount.Keys.Max(k => k.Length);
 
