@@ -54,7 +54,7 @@ namespace MLOOP2_L2
 
         public override string ToString()
         {
-            if (Files.Count == 0) return "Файлів немає";
+            if (Files.Count == 0) return " Файлів немає";
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < Files.Count; i++)
             {
